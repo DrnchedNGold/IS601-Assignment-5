@@ -1,3 +1,4 @@
+## DEMO VIDEO INCLUDED BELOW
 # 🧮 Python Calculator & Web API Assignment
 
 ## Overview
@@ -73,7 +74,7 @@ Each subclass implements `execute()` using the corresponding method from `Operat
 
 ## Demo Video
 
-https://drive.google.com/file/d/1Iyrw100iOGPkZxIqCRy0oVBkigRZYfhP/view?usp=sharing
+https://drive.google.com/file/d/12GHd5DL8toj8OFHpV7SpN4u-eirQq3IR/view?usp=sharing
 ---
 
 ## Useful Commands
@@ -94,3 +95,49 @@ https://drive.google.com/file/d/1Iyrw100iOGPkZxIqCRy0oVBkigRZYfhP/view?usp=shari
 - Use Python 3.10+ and virtual environments.
 - Docker setup is optional.
 - See test files for example usage and edge cases.
+
+---
+
+## Example REPL Interaction
+
+```
+Welcome to the Python Calculator REPL!
+Type 'help' for available commands or 'exit' to quit.
+
+> add 2 3
+Result: 5.0
+
+> multiply 4 5
+Result: 20.0
+
+> history
+1: add 2 3 = 5.0
+2: multiply 4 5 = 20.0
+
+> help
+Available commands:
+  add [a] [b]         - Add two numbers
+  subtract [a] [b]    - Subtract two numbers
+  multiply [a] [b]    - Multiply two numbers
+  divide [a] [b]      - Divide two numbers
+  history             - Show calculation history
+  help                - Show this help message
+  exit                - Exit the calculator
+
+> exit
+Goodbye!
+```
+
+---
+
+## Continuous Integration & Coverage Enforcement
+
+This project uses pytest and pytest-cov for automated testing and coverage reporting.  
+To enforce 100% coverage in your CI pipeline, add the following to your test command:
+
+```
+pytest --cov=app --cov-fail-under=100
+```
+
+If coverage drops below 100%, the CI build will fail.  
+Configure this in your CI workflow (e.g., GitHub Actions, GitLab CI) to ensure code quality.
