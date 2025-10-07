@@ -1,19 +1,39 @@
-# This line is importing the "calculator" function from another file.
-# Imagine that "calculator" is like a tool or recipe that we've already written somewhere else,
-# and now we are telling the computer, "Go and find that calculator tool for us."
-# The "app" part is like a folder, and inside that folder, there's another file called "calculator.py",
-# which has the tool (function) called "calculator" that we need.
-from app.calculator import calculator
+"""
+Advanced Calculator Application
 
-# This part of the code is super important! It checks if this file is being run directly by the computer.
-# Let me explain: when we write Python programs, sometimes we want to run them directly,
-# and other times we just want to use parts of the program inside other programs.
-# The "__name__" is a special word in Python. It tells us if we are running the program directly.
-# "__main__" is what Python calls this program when we run it directly.
+A comprehensive calculator demonstrating professional Python programming practices.
 
-# So, what this line means is: "If you're running this program directly (not as part of another program), 
-# then go ahead and start the calculator."
+Features:
+- Basic arithmetic (add, subtract, multiply, divide)
+- Advanced operations (power, root)
+- Calculation history with save/load
+- Undo/redo functionality
+- Input validation and error handling
+- Logging and configuration management
+
+Design Patterns:
+- Strategy: Swappable operations
+- Observer: Auto-save and logging
+- Factory: Creates operations dynamically
+- Memento: Undo/redo state management
+
+Code Organization:
+- calculator.py: Main calculator logic
+- calculator_repl.py: Command-line interface
+- operations.py: Arithmetic operations
+- calculation.py: Individual calculation objects
+- history.py: Observers for calculations
+- exceptions.py: Custom error types
+- input_validators.py: Input validation
+- calculator_config.py: Settings and configuration
+- calculator_memento.py: State snapshots
+
+Version: 1.0
+"""
+
+from app.calculator_repl import calculator_repl
+
+
 if __name__ == "__main__":
-    # Now, we use the calculator tool we got earlier. This will start the calculator, which is a program 
-    # that keeps running and doing math based on what we tell it.
-    calculator()
+    # Launch the interactive calculator interface
+    calculator_repl()
